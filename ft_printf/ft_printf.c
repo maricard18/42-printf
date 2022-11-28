@@ -6,18 +6,66 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:35:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/28 08:57:21 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:24:16 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
+int	ft_format(va_list *args, char c)
+{
+	int	len;
+
+	len = 0;
+	if (c == 'c')
+		len = len + ft_char(va_arg(*args, int));
+	if (c == 's')
+		len = len + ft_string(va_arg(*args, char *));
+	if (c == 'd' || c == 'i')
+		len = len + ft_number(va_arg(*args, int));
+	if (c == '%')
+	{
+		len++;
+		ft_putchar('%');
+	}
+	return (len);
+}
+
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int 	len;
+	int		i;
 
 	va_start (args, str);
 	len = ft_strlen (str);
-
+	i = 0;
+	while(str[i] != '\0')
+	{
+		if (str[i] == '%')
+		{
+			len = len + ft_format(&args, str[i + 1]);
+			i++;
+		}
+		else
+			ft_putchar(str[i]);
+		i++;
+	}
+	va_end(args);
+	return (len);
 }
+
+int	main(void)
+{
+	printf("FUNÇÃO PRINTF\n");
+	printf("-------------\n");
+	printf("\n");
+	
+	printf("ola\n");
+
+	printf("FUNÇÃO FT_PRINTF\n");
+	printf("-------------\n");
+	printf("\n");
+
+	ft_printf("ola\n");
+}	
