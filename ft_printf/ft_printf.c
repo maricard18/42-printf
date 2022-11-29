@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:35:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 13:16:10 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:23:02 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,12 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	printf("FUNÇÃO PRINTF\n");
-	printf("-------------\n");
+	printf("----PRINTF----\n");
+	printf("--------------\n");
 	printf("ola %X %c %d %c\n", 2, 'o', -432, 6);
+	printf("Char numbers | \n");
 	printf("\n");
-	printf("FUNÇÃO FT_PRINTF\n");
+	printf("--FT_PRINTF--\n");
 	printf("-------------\n");
 	ft_printf("ola %X %c %d %c\n", 2, 'o', -432, 6);
 }	
