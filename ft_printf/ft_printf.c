@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:35:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 11:27:31 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 12:33:54 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	ft_format(va_list *args, char c)
 	if (c == 'd' || c == 'i')
 		len = len + ft_number(va_arg(*args, int));
 	if (c == 'x')
-		len = len + ft_hexadecimal_x(va_arg(*args, unsigned int), c);
+		len = len + ft_hexadecimal_x(va_arg(*args, unsigned int));
 	if (c == 'X')
-		len = len + ft_hexadecimal_X(va_arg(*args, unsigned int), c);
+		len = len + ft_hexadecimal_X(va_arg(*args, unsigned int));
 	if (c == '%')
 	{
 		len++;
@@ -52,7 +52,10 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
+		{
+			len++;
 			ft_putchar(str[i]);
+		}
 		i++;
 	}
 	va_end(args);
@@ -63,9 +66,9 @@ int	main(void)
 {
 	printf("FUNÇÃO PRINTF\n");
 	printf("-------------\n");
-	printf("ola %d\n");
+	printf("ola %X %c %d %c\n", 2, 'o', -432, 6);
 	printf("\n");	
 	printf("FUNÇÃO FT_PRINTF\n");
 	printf("-------------\n");
-	ft_printf("ola %d\n", -2147483648);
+	ft_printf("ola %X %c %d %c\n", 2, 'o', -432, 6);
 }	
