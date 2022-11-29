@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_hexadecimal_x.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 15:46:13 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 08:37:21 by maricard         ###   ########.fr       */
+/*   Created: 2022/11/29 08:55:08 by maricard          #+#    #+#             */
+/*   Updated: 2022/11/29 11:20:46 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar(char c)
+int	ft_hexadecimal_x(unsigned long n, char c)
 {
-	write(1, &c, 1);
+	int	len;
+
+	len = 0;
+	if (n <= 9)
+	{
+		len++;
+		ft_putchar(n + 10);
+	}
+	if (c >= 16)
+	{
+		ft_hexadecimal_x(c / 16, c);
+		ft_hexadecimal_x(c % 16, c);
+	}
+	else
+	{	
+		len = len + 2;
+		ft_putchar(n - 10 + 'a');
+	}
+	return (len);
 }
