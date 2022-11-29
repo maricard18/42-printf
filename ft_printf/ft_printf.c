@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:35:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 12:33:54 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 13:16:10 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ int	ft_format(va_list *args, char c)
 	if (c == 'd' || c == 'i')
 		len = len + ft_number(va_arg(*args, int));
 	if (c == 'x')
-		len = len + ft_hexadecimal_x(va_arg(*args, unsigned int));
+		len = len + ft_hexadecimal(va_arg(*args, unsigned int));
 	if (c == 'X')
-		len = len + ft_hexadecimal_X(va_arg(*args, unsigned int));
+		len = len + ft_hexadecimal_x(va_arg(*args, unsigned int));
+	if (c == 'u')
+		len = len + ft_unsigned(va_arg(*args, int));
 	if (c == '%')
 	{
 		len++;
@@ -67,7 +69,7 @@ int	main(void)
 	printf("FUNÇÃO PRINTF\n");
 	printf("-------------\n");
 	printf("ola %X %c %d %c\n", 2, 'o', -432, 6);
-	printf("\n");	
+	printf("\n");
 	printf("FUNÇÃO FT_PRINTF\n");
 	printf("-------------\n");
 	ft_printf("ola %X %c %d %c\n", 2, 'o', -432, 6);

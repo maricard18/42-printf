@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: maricard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 08:55:08 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 12:23:29 by maricard         ###   ########.fr       */
+/*   Created: 2022/11/29 11:21:07 by maricard          #+#    #+#             */
+/*   Updated: 2022/11/29 13:15:21 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_hexadecimal_x(unsigned long n)
+int	ft_hexadecimal(unsigned long n)
 {
 	int	len;
 
@@ -28,9 +28,9 @@ int	ft_hexadecimal_x(unsigned long n)
 		ft_hexadecimal_x(n % 16);
 	}
 	if (n > 9 && n < 16)
-	{	
+	{
 		len = len + 2;
-		ft_putchar(n - 10 + 'a');
+		ft_putchar(n - 10 + 'A');
 	}
 	return (len);
 }
