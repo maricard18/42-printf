@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:35:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 14:23:02 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 17:33:48 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_format(va_list *args, char c)
 	if (c == 'X')
 		len = len + ft_hexadecimal_x(va_arg(*args, unsigned int));
 	if (c == 'u')
-		len = len + ft_unsigned(va_arg(*args, int));
+		len = len + ft_unsigned(va_arg(*args, unsigned int));
 	if (c == '%')
 	{
 		len++;
@@ -68,10 +68,9 @@ int	main(void)
 {
 	printf("----PRINTF----\n");
 	printf("--------------\n");
-	printf("ola %X %c %d %c\n", 2, 'o', -432, 6);
-	printf("Char numbers | \n");
+	printf("ola %c %s\n", 'c', "ola");
 	printf("\n");
 	printf("--FT_PRINTF--\n");
 	printf("-------------\n");
-	ft_printf("ola %X %c %d %c\n", 2, 'o', -432, 6);
+	ft_printf("ola %c %s\n", 'c', "ola");
 }	
