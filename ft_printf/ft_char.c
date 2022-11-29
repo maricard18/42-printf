@@ -6,11 +6,11 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:19:40 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 17:32:13 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 18:47:05 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_char(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:35:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 17:33:48 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 18:46:27 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_format(va_list *args, char c)
 {
@@ -29,6 +29,8 @@ int	ft_format(va_list *args, char c)
 		len = len + ft_hexadecimal_x(va_arg(*args, unsigned int));
 	if (c == 'u')
 		len = len + ft_unsigned(va_arg(*args, unsigned int));
+	if (c == 'p')
+		len = len + ft_pointer(va_arg(*args, unsigned long long));
 	if (c == '%')
 	{
 		len++;
@@ -66,11 +68,12 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
+	int x =0;
 	printf("----PRINTF----\n");
 	printf("--------------\n");
-	printf("ola %c %s\n", 'c', "ola");
+	printf("ola %p %p\n", NULL,&x);
 	printf("\n");
 	printf("--FT_PRINTF--\n");
 	printf("-------------\n");
-	ft_printf("ola %c %s\n", 'c', "ola");
+	ft_printf("ola %p %p\n", NULL, &x);
 }	
