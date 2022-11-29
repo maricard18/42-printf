@@ -6,7 +6,7 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:35:09 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 18:46:27 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 18:59:53 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
+/*
 int	main(void)
 {
 	int x =0;
@@ -76,4 +77,5 @@ int	main(void)
 	printf("--FT_PRINTF--\n");
 	printf("-------------\n");
 	ft_printf("ola %p %p\n", NULL, &x);
-}	
+}
+*/

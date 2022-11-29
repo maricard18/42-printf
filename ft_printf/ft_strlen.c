@@ -6,11 +6,11 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 08:57:54 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 13:15:35 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/29 18:56:04 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *str)
 {
