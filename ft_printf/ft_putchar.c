@@ -6,13 +6,13 @@
 /*   By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:46:13 by maricard          #+#    #+#             */
-/*   Updated: 2022/11/29 18:50:59 by maricard         ###   ########.fr       */
+/*   Updated: 2022/11/30 11:02:53 by maricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(int c)
 {
 	write(1, &c, 1);
 }

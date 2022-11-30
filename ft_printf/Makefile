@@ -6,7 +6,7 @@
 #    By: maricard <maricard@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/28 08:21:41 by maricard          #+#    #+#              #
-#    Updated: 2022/11/29 18:40:10 by maricard         ###   ########.fr        #
+#    Updated: 2022/11/30 12:58:27 by maricard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,7 @@ CC = clang
 CFLAGS = -Wall -Werror -Wextra
 
 SRC = ft_printf.c ft_char.c ft_number.c ft_putchar.c ft_string.c \
-ft_strlen.c ft_hexadecimal.c ft_hexadecimal_x.c ft_unsigned.c ft_pointer.c
-
+ft_hexadecimal.c ft_hexadecimal_x.c ft_unsigned.c ft_pointer.c
 
 SRC-OBJ = $(SRC:.c=.o)
 
