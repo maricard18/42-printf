@@ -18,7 +18,7 @@ To clone and run this project, just follow this instructions
 $ git clone https://github.com/maricard18/42-printf
 
 # Go into the repository
-$ cd printf
+$ cd ft_printf
 
 # Run make command
 $ make
