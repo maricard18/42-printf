@@ -3,7 +3,7 @@
 ## Recreating printf() function
 
 This project is about recreating printf() function. <br>
-Project in rank 1 of 42 common core and was graded with the score of 100. <br>
+Project in rank 1 of 42 common core and was graded with the score of 100/100. <br>
 -> [Subject here](https://github.com/maricard18/42-printf/blob/main/extras/en.subject.pdf)
 
 
