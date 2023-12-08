@@ -1,13 +1,10 @@
-<p align="center">
-    <img src="https://github.com/maricard18/42-printf/blob/main/extras/printf.png" alt="printf">
-</p>
-
+# ft_printf
 
 ## Recreating printf() function
 
 This project is about recreating printf() function. <br>
-Project in rank 1 of 42 common core and had passed with the score of 100. <br>
-[-> Subject here](https://github.com/maricard18/42-printf/blob/main/extras/en.subject.pdf)
+Project in rank 1 of 42 common core and was graded with the score of 100. <br>
+-> [Subject here](https://github.com/maricard18/42-printf/blob/main/extras/en.subject.pdf)
 
 
 ## How To Use
@@ -23,22 +20,12 @@ $ cd ft_printf
 
 # Run make command
 $ make
+
+# Test it out!
 ```
-
-> **Note**
-> this project is only useful when used with porpuse. So if you want to get the most of it you will need to build a main function.
-
-
-## Credits
-
-This README uses the following packages
-
-- [Flaming Text](https://www10.flamingtext.com)
-
-
-### Special thanks - [42 Porto](https://www.42porto.com/en)
 
 ---
 
 > GitHub [@maricard18](https://github.com/maricard18) &nbsp;&middot;&nbsp;
-> Linkedin [Mario Henriques](https://www.linkedin.com/in/mario18)
+> Linkedin [Mario Henriques](https://www.linkedin.com/in/mario18) &nbsp;&middot;&nbsp;
+> [42 Porto](https://www.42porto.com/en)
